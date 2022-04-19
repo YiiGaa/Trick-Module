@@ -1,5 +1,6 @@
 [
     "Content.html",
     "Content.js",
-    "Content.css"
+    "Content.css",
+    "lib/textcontent.css"
 ]
