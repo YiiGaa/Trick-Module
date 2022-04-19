@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>IndexTab</title>
+
+    <!-- Basic dependence css -->
+    <link rel="stylesheet" href="../../Common/BasicDependence/bootstrap/css/bootstrap.css">
+
+    <!--Theme Css start-->
+      <link href="../../Common/Theme/theme.css" rel="stylesheet">
+      <link href="../../Common/Theme/font.css" rel="stylesheet">
+    <!--Theme Css end-->
+
+    <!--self Css start-->
+      <link href="IndexTab.css" rel="stylesheet">
+    <!--self Css end-->
+
+  </head>
+  <body onload="ControlLoad()">
+    <!--self Lib css start (please put your lib in ./lib) -->
+    <!--self Lib css end-->
+<br><br><br><br><br><br><br><br><br><br><br><br><br>
+    <!--######IndexTab######-->
+      <div id="id_IndexTab_body" class="container-fluid" v-cloak>
+        <div class="row">
+          <div class="col-sm-12 IndexTab_MainBody d-none d-sm-block Theme_ModuleColor">
+            <ul class="nav nav-pills nav-fill">
+              <li v-for="(list,index) in Vue_IndexTab_index" class="nav-item Font_Title_Size ">
+                <a class="nav-link Font_Link_Color" :class="list.title==Vue_IndexTab_active?'active':''" :href="list.link" @click="Vue_IndexTab_MenuFunction(list)">{{list.title}}</a>
+              </li>
+            </ul>
+          </div>
+          <div class="IndexTab_LeftBodyMini d-sm-none">
+            <i class="bi bi-caret-left-fill IndexTab_LeftBodyMini_left Font_Title_Size" @click="Vue_IndexTab_leftFunction()"></i>
+            <div class="IndexTab_LeftBodyMini_body Font_Text_Size">
+              <a v-for="(list,index) in Vue_IndexTab_index" class="IndexTab_LeftBodyMini_bodyPiece" :href="list.link" :class="list.title==Vue_IndexTab_active?'IndexTab_LeftBodyMini_bodyPieceActive':''" @click="Vue_IndexTab_MenuFunction(list)">{{list.title}}</a>
+            </div>
+            <i class="bi bi-caret-right-fill IndexTab_LeftBodyMini_right Font_Title_Size" @click="Vue_IndexTab_rightFunction()"></i>
+          </div>
+        </div>
+      </div>
+    <!--######IndexTab######-->
+<br><br><br><br><br><br><br><br><br><br><br><br><br>
+  </body>
+  <!-- jQuery (necessary for JavaScript plugins) -->
+    <!--Basic dependence js (Not recommend modification)-->
+      <script src="../../Common/BasicDependence/jquery/jquery.min.js"></script>
+      <script src="../../Common/BasicDependence/vue/vue.js"></script>
+      <script src="../../Common/BasicDependence/bootstrap/js/bootstrap.js"></script>
+    <!--Basic dependence js-->
+
+    <!--self Lib js start (please put your lib in ./lib) -->
+    <!--self Lib js end-->
+
+    <!--Debugging Tools import (It can't be changed)-->
+      <script src="../../Common/Lib/import.js"></script>
+      <script src="../../Common/DebuggingTools/IncludeLib.js"></script>
+    <!--Debugging Tools import-->
+
+    <!--self js start-->
+      <script src="IndexTab.js"></script>
+    <!--self js end-->
+</html>

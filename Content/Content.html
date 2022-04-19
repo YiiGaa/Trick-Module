@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Content</title>
+
+    <!-- Basic dependence css -->
+    <link rel="stylesheet" href="../../Common/BasicDependence/bootstrap/css/bootstrap.css">
+
+    <!--Theme Css start-->
+      <link href="../../Common/Theme/theme.css" rel="stylesheet">
+      <link href="../../Common/Theme/font.css" rel="stylesheet">
+    <!--Theme Css end-->
+
+    <!--self Css start-->
+      <link href="Content.css" rel="stylesheet">
+    <!--self Css end-->
+
+  </head>
+  <body onload="ControlLoad()">
+    <!--self Lib css start (please put your lib in ./lib) -->
+    <link href="./lib/textcontent.css" rel="stylesheet">
+    <!--self Lib css end-->
+
+    <!--######Content######-->
+    <div id="id_Content_body" class="container-fluid" v-cloak>
+      <div class="row Content_Whole">
+        <div class="col-sm-12 Content_Head Theme_ModuleColor">
+          <div v-if="Vue_Content_Title" class="Content_HeadTitle Font_BigTitle_Size Font_WeightBlod">{{Vue_Content_Title}}</div>
+          <div v-if="Vue_Content_Title" class="Content_HeadInfo Font_Tips_Color Font_Info_Size"><i class="bi bi-clock"></i>{{Vue_Content_Info}}</div>
+        </div>
+        <div class="col-sm-12 Content_Body editor-content Theme_ModuleColor" v-html="Vue_Content_Content">
+
+        </div>
+      </div>
+    </div>
+    <!--######Content######-->
+  </body>
+  <!-- jQuery (necessary for JavaScript plugins) -->
+    <!--Basic dependence js (Not recommend modification)-->
+      <script src="../../Common/BasicDependence/jquery/jquery.min.js"></script>
+      <script src="../../Common/BasicDependence/vue/vue.js"></script>
+      <script src="../../Common/BasicDependence/bootstrap/js/bootstrap.js"></script>
+    <!--Basic dependence js-->
+
+    <!--self Lib js start (please put your lib in ./lib) -->
+    <!--self Lib js end-->
+
+    <!--Debugging Tools import (It can't be changed)-->
+      <script src="../../Common/Lib/import.js"></script>
+      <script src="../../Common/DebuggingTools/IncludeLib.js"></script>
+    <!--Debugging Tools import-->
+
+    <!--self js start-->
+      <script src="Content.js"></script>
+    <!--self js end-->
+</html>

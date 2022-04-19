@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>IndexBlock</title>
+
+    <!-- Basic dependence css -->
+    <link rel="stylesheet" href="../../Common/BasicDependence/bootstrap/css/bootstrap.css">
+
+    <!--Theme Css start-->
+      <link href="../../Common/Theme/theme.css" rel="stylesheet">
+      <link href="../../Common/Theme/font.css" rel="stylesheet">
+    <!--Theme Css end-->
+
+    <!--self Css start-->
+      <link href="IndexBlock.css" rel="stylesheet">
+    <!--self Css end-->
+
+  </head>
+  <body onload="ControlLoad()">
+    <!--self Lib css start (please put your lib in ./lib) -->
+    <!--self Lib css end-->
+    <br><br><br><br>
+    <!-- <div style="position: absolute;top:40px;left:200px;height: 700px;width: 300px;"> -->
+    <!--######IndexBlock######-->
+      <div id="id_IndexBlock_body" class="container-fluid " v-cloak>
+        <div class="row">
+          <div class="col-sm-12 d-none d-sm-block IndexBlock_Head Theme_ModuleColor Font_Title_Size">
+            {{Vue_IndexBlock_Title}}
+          </div>
+          <div class="col-sm-12 d-sm-none IndexBlock_Head Theme_ModuleColor Font_Title_Size" @click="Vue_IndexBlock_ShowIndex()">
+            {{Vue_IndexBlock_ActiveTitle}}
+          </div>
+          <div class="col-sm-12 IndexBlock_Body Theme_ModuleColor" :class="Vue_IndexBlock_Show==false?'':'IndexBlock_Body_Show'">
+            <div class="accordion" id="id_IndexBlock_IndexBody">
+              <div v-for="(list,index) in Vue_IndexBlock_List" class="accordion-item">
+                <h2 class="accordion-header" :id="'id_IndexBlock_IndexBody_handOne'+index">
+                  <button class="accordion-button" :class="index==Vue_IndexBlock_ShowButton?'':'collapsed'" type="button" data-bs-toggle="collapse" :data-bs-target="'#id_IndexBlock_IndexBody_collapseOne'+index" aria-expanded="true" :aria-controls="'#id_IndexBlock_IndexBody_collapseOne'+index">
+                    {{list.title}}
+                  </button>
+                </h2>
+                <div :id="'id_IndexBlock_IndexBody_collapseOne'+index" class="accordion-collapse collapse" :class="index==Vue_IndexBlock_ShowButton?'show':''" :aria-labelledby="'#id_IndexBlock_IndexBody_handOne'+index">
+                  <div class="accordion-body">
+                    <ul class="list-unstyled">
+                      <li v-for="list_2 in list.list"  :class="Vue_IndexBlock_Active==list_2.key?'IndexBlock_IndexSelect':''" @click="Vue_IndexBlock_Select(list_2)" >
+                        <a class="Theme_text-ellipsis" :title="list_2.title" :href="list_2.link">{{list_2.title}}</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    <!--######IndexBlock######-->
+    <!-- </div> -->
+  </body>
+  <!-- jQuery (necessary for JavaScript plugins) -->
+    <!--Basic dependence js (Not recommend modification)-->
+      <script src="../../Common/BasicDependence/jquery/jquery.min.js"></script>
+      <script src="../../Common/BasicDependence/vue/vue.js"></script>
+      <script src="../../Common/BasicDependence/bootstrap/js/bootstrap.js"></script>
+    <!--Basic dependence js-->
+
+    <!--self Lib js start (please put your lib in ./lib) -->
+    <!--self Lib js end-->
+
+    <!--Debugging Tools import (It can't be changed)-->
+      <script src="../../Common/Lib/import.js"></script>
+      <script src="../../Common/DebuggingTools/IncludeLib.js"></script>
+    <!--Debugging Tools import-->
+
+    <!--self js start-->
+      <script src="IndexBlock.js"></script>
+    <!--self js end-->
+</html>

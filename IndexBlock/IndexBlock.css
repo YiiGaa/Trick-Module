@@ -1,0 +1,130 @@
+.IndexBlock_Whole{
+    padding:0rem;
+    position: relative;
+    margin: auto;
+}
+
+.IndexBlock_Padding0{
+    padding: 0rem;
+}
+
+.IndexBlock_Head{
+    border-radius: 1.2rem;
+    height: 6rem;
+    line-height: 6rem;
+    text-align: center;
+    position: relative;
+    box-shadow:0rem 0rem 2.0rem 0.1rem rgb(83 103 199 / 13%);
+}
+
+.IndexBlock_Body{
+    transition: 0.3s;
+    padding-top: 3.0rem;
+    padding-bottom: 3.0rem;
+    margin-top: 1.5rem;
+    height: 64.5rem;
+    border-radius: 1.2rem;
+    overflow: auto;
+    box-shadow:0rem 0rem 2.0rem 0.1rem rgb(83 103 199 / 13%);
+}
+
+@media screen and (max-width: 768px) {
+    .IndexBlock_Body{
+        height: 0rem;
+        padding: 0rem;
+        margin: 0rem;
+        overflow: hidden;
+    }
+}
+
+.IndexBlock_Body_Show{
+    height: 30.0rem;
+    overflow: auto;
+    padding: 1.5rem;
+    padding-top: 3.0rem;
+    margin-top: 1.5rem;
+    margin-bottom: 3.0rem;
+}
+
+.IndexBlock_Body .list-unstyled{
+    padding-top: 1.0rem;
+    padding-bottom: 2.0rem;
+}
+
+.IndexBlock_Body .accordion-item{
+    border: 0;
+}
+
+.IndexBlock_Body .accordion-button{
+    font-weight: bold;
+    color: var(--Font_Normal_Color);
+    padding: 0.75rem 1.25rem;
+    margin-top:0.5rem;
+    font-size: var(--Font_SubTitle_Size);
+}
+
+.IndexBlock_Body .accordion-button:not(.collapsed){
+    box-shadow: none;
+    background-color: var(--Theme_ActiveColor);
+    color: var(--Font_Invert_Color);
+}
+
+.IndexBlock_Body .accordion-button:hover{
+    background-color: var(--Theme_ActiveHoverColor);
+    color: var(--Font_Invert_Color);
+}
+
+.IndexBlock_Body a{
+    color: var(--Font_Normal_Color);
+    text-decoration: none;
+    display: block;
+    /* font-weight: bold; */
+}
+
+.IndexBlock_Body .accordion-body{
+    padding: 0rem 0rem 0rem 1.5rem;
+}
+
+.IndexBlock_Body .accordion-body li{
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    height: 3.0rem;
+    line-height: 3.0rem;
+    margin-top: .5rem;
+    margin-bottom: 0rem;
+    position: relative;
+    cursor: pointer;
+    overflow: hidden;
+    transition: 0.3s;
+}
+.IndexBlock_Body .accordion-body li:hover{
+    box-shadow: -0.7rem 0rem 1.3rem 1.3rem rgba(213,226,255,0.24) inset;
+    transition: 0.3s;
+}
+.IndexBlock_Body .accordion-body li:hover a{
+    color: var(--Font_Link_Color);
+    transition: 0.3s;
+}
+
+.IndexBlock_IndexSelect{
+    color: var(--Font_Link_Color);
+    border-left: .5rem solid var(--Theme_ActiveColor);
+    box-shadow: -0.7rem 0rem 1.3rem 1.3rem rgba(213,226,255,0.24) inset;
+}
+
+.IndexBlock_IndexSelect a{
+    color: var(--Font_Link_Color);
+}
+
+.IndexBlock_IndexSelect::after{
+    border: solid transparent;
+    content: ' ';
+    right: 1.0rem;    
+    position: absolute;
+    width: 0;
+    border-width: 0.8rem;
+    border-right-color: var(--Theme_ActiveColor);
+    top: 50%;
+    transform:translateY(-50%);
+}
+

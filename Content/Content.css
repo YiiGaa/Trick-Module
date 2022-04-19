@@ -1,0 +1,36 @@
+.Content_Whole{
+    box-shadow:var(--Theme_BoxShadow);
+    border-radius: 12px;
+}
+
+.Content_Head{
+    padding: 30px 30px 0px 30px;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+}
+
+.Content_HeadInfo{
+    margin-top: 15px;
+    text-align: right;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #eee;
+}
+
+.Content_HeadInfo i{
+    margin-right: 5px;
+}
+
+.Content_Body{
+    padding: 30px;
+    border-bottom-left-radius: 12px;
+    border-bottom-right-radius: 12px;
+}
+
+@media screen and (max-width: 768px) {
+    .Content_Head{
+        padding: 30px 15px 0px 15px;
+    }
+    .Content_Body{
+        padding: 30px 15px;
+    }
+}

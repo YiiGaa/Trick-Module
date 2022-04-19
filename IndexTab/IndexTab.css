@@ -1,0 +1,77 @@
+.IndexTab_MainBody{
+    height: 6rem;
+    border-top-left-radius: 1.2rem;
+    border-top-right-radius: 1.2rem;
+    padding: 0rem;
+    overflow: hidden;
+    box-shadow: 0rem 0rem 2.0rem 0.1rem rgb(83 103 199 / 13%);
+}
+
+.IndexTab_MainBody li{
+    line-height: 5rem;
+}
+
+.IndexTab_MainBody .active{
+    border-radius: 0;
+}
+
+.IndexTab_LeftBodyMini{
+    width: 100%;
+    height: 6rem;
+    padding-top: 1rem;
+}
+
+.IndexTab_LeftBodyMini_body{
+    width: calc(100% - 6rem);
+    height: 4rem;
+    overflow: hidden;
+    float: left;
+    white-space: nowrap;
+    padding-top: .5rem;
+}
+
+.IndexTab_LeftBodyMini a{
+    text-decoration: none;
+}
+
+.IndexTab_LeftBodyMini_bodyPiece{
+    display: inline-block;
+    height:3rem;
+    margin-left: 0rem;
+    margin-right: 0rem;
+    padding: 0rem 1.5rem;
+    line-height: 3.0rem;
+    color: var(--Font_Text_Color);
+    transition: 0.3s;
+}
+
+.IndexTab_LeftBodyMini_bodyPieceActive{
+    background-color: var(--Theme_ActiveColor);
+    color: var(--Font_Invert_Color) !important;
+    border-radius: 1.2rem;
+}
+
+.IndexTab_LeftBodyMini_left{
+    float: left;
+    line-height: 4.0rem;
+    width: 3.0rem;
+    color: #ccc;
+}
+
+.IndexTab_LeftBodyMini_right{
+    float: left;
+    line-height: 4.0rem;
+    width: 3.0rem;
+    color: #ccc;
+    text-align: right;
+}
+
+@media screen and (max-width: 768px) {
+    .IndexTab_Body{
+        background-image: none;
+    }
+
+    .IndexTab_MainBody li{
+        line-height: none;
+    }
+}
