@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>WallDeep</title>
+
+    <!-- Basic dependence css -->
+    <link rel="stylesheet" href="../../Common/BasicDependence/bootstrap/css/bootstrap.css">
+
+    <!--Theme Css start-->
+      <link href="../../Common/Theme/theme.css" rel="stylesheet">
+      <link href="../../Common/Theme/font.css" rel="stylesheet">
+    <!--Theme Css end-->
+
+    <!--self Css start-->
+      <link href="WallDeep.css" rel="stylesheet">
+    <!--self Css end-->
+
+  </head>
+  <body onload="ControlLoad()">
+    <!--self Lib css start (please put your lib in ./lib) -->
+    <!--self Lib css end-->
+
+    <!--######WallDeep######-->
+    <div class="WallDeep_Body">
+      <div id="id_WallDeep_body" class="container-xxl" v-cloak>
+        <div class="row WallDeep_mainBody Font_Invert_Color">
+          <div class="col-sm-12 WallDeep_Title Font_BigBigTitle_Size">
+            {{Vue_WallDeep_Title}}
+          </div>
+          <div v-for="(list,index) in Vue_WallDeep_List" class="col-sm-4 WallDeep_Piece text-center" :class="{WallDeep_PieceDown:index==1}">
+            <div class="WallDeep_Piece_Logo Theme_center-horizontal" :style="{backgroundImage: 'url('+list.img+')'}"></div>
+            <div class="WallDeep_Piece_Title Font_BlockTitle_Size">{{list.title}}</div>
+            <div class="WallDeep_Piece_Info Font_Text_Size" v-html="list.info"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--######WallDeep######-->
+  </body>
+  <!-- jQuery (necessary for JavaScript plugins) -->
+    <!--Basic dependence js (Not recommend modification)-->
+      <script src="../../Common/BasicDependence/jquery/jquery.min.js"></script>
+      <script src="../../Common/BasicDependence/vue/vue.js"></script>
+      <script src="../../Common/BasicDependence/bootstrap/js/bootstrap.js"></script>
+    <!--Basic dependence js-->
+
+    <!--self Lib js start (please put your lib in ./lib) -->
+    <!--self Lib js end-->
+
+    <!--Debugging Tools import (It can't be changed)-->
+      <script src="../../Common/Lib/import.js"></script>
+      <script src="../../Common/DebuggingTools/IncludeLib.js"></script>
+    <!--Debugging Tools import-->
+
+    <!--self js start-->
+      <script src="WallDeep.js"></script>
+    <!--self js end-->
+</html>

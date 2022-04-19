@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>WallLight</title>
+
+    <!-- Basic dependence css -->
+    <link rel="stylesheet" href="../../Common/BasicDependence/bootstrap/css/bootstrap.css">
+
+    <!--Theme Css start-->
+      <link href="../../Common/Theme/theme.css" rel="stylesheet">
+      <link href="../../Common/Theme/font.css" rel="stylesheet">
+    <!--Theme Css end-->
+
+    <!--self Css start-->
+      <link href="WallLight.css" rel="stylesheet">
+    <!--self Css end-->
+
+  </head>
+  <body onload="ControlLoad()">
+    <!--self Lib css start (please put your lib in ./lib) -->
+    <!--self Lib css end-->
+
+    <!--######WallLight######-->
+    <div class="WallLight_Body">
+      <div id="id_WallLight_body" class="container-xxl" v-cloak>
+        <div class="row WallLight_mainBody">
+          <div class="col-sm-12 WallLight_Title Font_BigBigTitle_Size Font_Link_Color">
+            {{Vue_WallLight_Title}}
+          </div>
+          <div v-for="(list,index) in Vue_WallLight_List" class="col-sm-4 WallLight_Piece text-center" :class="{WallLight_PieceDown:Vue_WallLight_PieceDownFunction(index)}" :style="{color: Vue_WallLight_ColorFunction(index)}">
+            <i class="bi bi-check-circle-fill"></i>
+            <div class="WallLight_Piece_Title Font_BigTitle_Size">{{list.title}}</div>
+            <div class="WallLight_Piece_Info Font_Text_Size Font_Text_Color" v-html="list.info"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--######WallLight######-->
+  </body>
+  <!-- jQuery (necessary for JavaScript plugins) -->
+    <!--Basic dependence js (Not recommend modification)-->
+      <script src="../../Common/BasicDependence/jquery/jquery.min.js"></script>
+      <script src="../../Common/BasicDependence/vue/vue.js"></script>
+      <script src="../../Common/BasicDependence/bootstrap/js/bootstrap.js"></script>
+    <!--Basic dependence js-->
+
+    <!--self Lib js start (please put your lib in ./lib) -->
+    <!--self Lib js end-->
+
+    <!--Debugging Tools import (It can't be changed)-->
+      <script src="../../Common/Lib/import.js"></script>
+      <script src="../../Common/DebuggingTools/IncludeLib.js"></script>
+    <!--Debugging Tools import-->
+
+    <!--self js start-->
+      <script src="WallLight.js"></script>
+    <!--self js end-->
+</html>

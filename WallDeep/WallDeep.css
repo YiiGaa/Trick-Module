@@ -1,0 +1,57 @@
+.WallDeep_Body{
+    clip-path: polygon(0 5rem, 30% 5rem, calc(30% + 3rem) 0rem, calc(70% - 3rem) 0rem, 70% 5rem ,100% 5rem,
+                        100% calc(100% - 5rem), 70% calc(100% - 5rem), calc(70% - 3rem) 100%, calc(30% + 3rem) 100%, 30% calc(100% - 5rem), 0 calc(100% - 5rem));
+    background-image: linear-gradient(to bottom, #3A32B9 , #5438D5);
+}
+
+.WallDeep_mainBody{
+    padding-top: 10rem;
+    padding-bottom: 15rem;
+    text-align: center;
+}
+
+.WallDeep_Title{
+    font-weight: bold;
+}
+
+.WallDeep_Piece{
+    text-align: center;
+    margin-top: 3rem;
+}
+
+.WallDeep_PieceDown{
+    margin-top: 7rem;
+}
+
+.WallDeep_Piece_Logo{
+    width: 12rem;
+    height: 10rem;
+    background-size: 64px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-color: #5237d3;
+    clip-path: polygon(0 50%, 20% 0, 80% 0, 100% 50%, 80% 100%, 20% 100%);
+}
+
+.WallDeep_Piece_Title{
+    margin-top: 2rem;
+    font-weight: bold;
+}
+
+.WallDeep_Piece_Info{
+    margin-top: 1rem;
+    padding:0 4rem;
+}
+
+@media screen and (max-width: 576px) {
+    .WallDeep_mainBody{
+        padding-bottom: 10rem;
+    }
+    .WallDeep_PieceDown{
+        margin-top: 3rem;
+    }
+    .WallDeep_Piece_Info{
+        padding:0;
+    }
+}
+

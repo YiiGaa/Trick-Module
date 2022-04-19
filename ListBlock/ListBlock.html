@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>ListBlock</title>
+
+    <!-- Basic dependence css -->
+    <link rel="stylesheet" href="../../Common/BasicDependence/bootstrap/css/bootstrap.css">
+
+    <!--Theme Css start-->
+      <link href="../../Common/Theme/theme.css" rel="stylesheet">
+      <link href="../../Common/Theme/font.css" rel="stylesheet">
+    <!--Theme Css end-->
+
+    <!--self Css start-->
+      <link href="ListBlock.css" rel="stylesheet">
+    <!--self Css end-->
+
+  </head>
+  <body onload="ControlLoad()">
+    <!--self Lib css start (please put your lib in ./lib) -->
+    <!--self Lib css end-->
+
+    <!--######ListBlock######-->
+    <div class="ListBlock_Body">
+      <div id="id_ListBlock_body" class="container-xxl ListBlock_mainBody" v-cloak>
+        <div v-for="list in Vue_ListBlock_Index" class="row ListBlock_Piece">
+            <div class="col-sm-12 ListBlock_Piece_Title Font_BigBigTitle_Size Font_Link_Color">
+              {{list.title}}
+            </div>
+            <div v-for="list_1 in list.index" class="col-sm-4 ListBlock_Piece_Block">
+              <div class="ListBlock_Piece_BlockBody">
+                <div class="ListBlock_Piece_BlockTitle Font_BlockTitle_Size Font_Link_Color">
+                  {{list_1.title}}
+                </div>
+                <div class="ListBlock_Piece_ListBlock Font_SubTitle_Size">
+                  <a v-for="list_3 in Vue_ListBlock_List[list_1.id]" :href="list_3.link"><div class="Theme_text-ellipsis" :title="list_3.title">{{list_3.title}}</div></a>
+                </div>
+                <a :href="list_1.link"><div class="ListBlock_Piece_BlockButton Theme_OKButton Font_Text_Size">{{Vue_ListBlock_More}}</div></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--######ListBlock######-->
+  </body>
+  <!-- jQuery (necessary for JavaScript plugins) -->
+    <!--Basic dependence js (Not recommend modification)-->
+      <script src="../../Common/BasicDependence/jquery/jquery.min.js"></script>
+      <script src="../../Common/BasicDependence/vue/vue.js"></script>
+      <script src="../../Common/BasicDependence/bootstrap/js/bootstrap.js"></script>
+    <!--Basic dependence js-->
+
+    <!--self Lib js start (please put your lib in ./lib) -->
+    <!--self Lib js end-->
+
+    <!--Debugging Tools import (It can't be changed)-->
+      <script src="../../Common/Lib/import.js"></script>
+      <script src="../../Common/DebuggingTools/IncludeLib.js"></script>
+    <!--Debugging Tools import-->
+
+    <!--self js start-->
+      <script src="ListBlock.js"></script>
+    <!--self js end-->
+</html>

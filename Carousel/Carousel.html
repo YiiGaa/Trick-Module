@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Carousel</title>
+
+    <!-- Basic dependence css -->
+    <link rel="stylesheet" href="../../Common/BasicDependence/bootstrap/css/bootstrap.css">
+
+    <!--Theme Css start-->
+      <link href="../../Common/Theme/theme.css" rel="stylesheet">
+      <link href="../../Common/Theme/font.css" rel="stylesheet">
+    <!--Theme Css end-->
+
+    <!--self Css start-->
+      <link href="Carousel.css" rel="stylesheet">
+    <!--self Css end-->
+
+  </head>
+  <body onload="ControlLoad()">
+    <!--self Lib css start (please put your lib in ./lib) -->
+    <!--self Lib css end-->
+
+    <!--######Carousel######-->
+    <nav id="id_Carousel_body" class="navbar Carousel_Body navbar-dark" v-cloak> 
+      <div class="container-xxl">
+        <div class="row Carousel_MainBody">
+          <div id="id_Carousel_carousel" class="carousel slide carousel-fade" data-bs-ride="carousel">
+            <div :class="Vue_Carousel_isHideIndicator==true?'visually-hidden':''" class="carousel-indicators">
+              <button v-for="(list,index) in Vue_Carousel_list" type="button" data-bs-target="#id_Carousel_carousel" :data-bs-slide-to="index" :class="index==0?'active':''" :aria-current="index==0?'true':'false'"></button>
+            </div>
+            <div class="carousel-inner">
+              <div v-for="(list,index) in Vue_Carousel_list" class="carousel-item" :class="index==0?'active':''" :data-bs-interval="Vue_Carousel_interval">
+                <a :href="list.link" target="_blank"><img :src="list.src" class="d-block w-100"></a>
+              </div>
+            </div>
+            <button :class="Vue_Carousel_isHideButton==true?'visually-hidden':''" class="carousel-control-prev" type="button" data-bs-target="#id_Carousel_carousel" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button :class="Vue_Carousel_isHideButton==true?'visually-hidden':''" class="carousel-control-next" type="button" data-bs-target="#id_Carousel_carousel" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <!--######Carousel######-->
+  </body>
+  <!-- jQuery (necessary for JavaScript plugins) -->
+    <!--Basic dependence js (Not recommend modification)-->
+      <script src="../../Common/BasicDependence/jquery/jquery.min.js"></script>
+      <script src="../../Common/BasicDependence/vue/vue.js"></script>
+      <script src="../../Common/BasicDependence/bootstrap/js/bootstrap.js"></script>
+    <!--Basic dependence js-->
+
+    <!--self Lib js start (please put your lib in ./lib) -->
+    <!--self Lib js end-->
+
+    <!--Debugging Tools import (It can't be changed)-->
+      <script src="../../Common/Lib/import.js"></script>
+      <script src="../../Common/DebuggingTools/IncludeLib.js"></script>
+    <!--Debugging Tools import-->
+
+    <!--self js start-->
+      <script src="Carousel.js"></script>
+    <!--self js end-->
+</html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>ListRolling</title>
+
+    <!-- Basic dependence css -->
+    <link rel="stylesheet" href="../../Common/BasicDependence/bootstrap/css/bootstrap.css">
+
+    <!--Theme Css start-->
+      <link href="../../Common/Theme/theme.css" rel="stylesheet">
+      <link href="../../Common/Theme/font.css" rel="stylesheet">
+    <!--Theme Css end-->
+
+    <!--self Css start-->
+      <link href="ListRolling.css" rel="stylesheet">
+    <!--self Css end-->
+
+  </head>
+  <body onload="ControlLoad()">
+    <!--self Lib css start (please put your lib in ./lib) -->
+    <!--self Lib css end-->
+
+    <!--######ListRolling######-->
+    <div class="ListRolling_Body">
+      <div id="id_ListRolling_body" class="container-xxl" v-cloak>
+        <div class="row ListRolling_mainBody" @mouseenter="Vue_ListRolling_StopTimerFunction()" @mouseleave="Vue_ListRolling_StartTimerFunction()">
+          <div class="col-sm-3 ListRolling_LeftBody d-none d-sm-block">
+            <img class="ListRolling_Logo" :src="Vue_ListRolling_logo"/>
+            <ul class="list-group">
+              <li v-for="(list,index) in Vue_ListRolling_index" class="list-group-item ListRolling_ListItem Font_Text_Size" :class="index==Vue_ListRolling_active?'ListRolling_ListItemActive':''" @click="Vue_ListRolling_MenuFunction(list.id, index)">{{list.title}}</li>
+            </ul>
+            <a v-if="Vue_ListRolling_button" :href="Vue_ListRolling_moreLink"><div class="ListRolling_Button Theme_OKButton Font_Text_Size" @click="Vue_ListRolling_indexSelectFunction(Vue_ListRolling_key)">{{Vue_ListRolling_button}}</div></a>
+          </div>
+          <div class="ListRolling_LeftBodyMini d-sm-none">
+            <i class="bi bi-caret-left-fill ListRolling_LeftBodyMini_left Font_Title_Size" @click="Vue_ListRolling_leftFunction()"></i>
+            <div class="ListRolling_LeftBodyMini_body Font_Text_Size">
+              <div v-for="(list,index) in Vue_ListRolling_index" class="ListRolling_LeftBodyMini_bodyPiece" :class="index==Vue_ListRolling_active?'ListRolling_LeftBodyMini_bodyPieceActive':''" @click="Vue_ListRolling_MenuFunction(list.id, index)">{{list.title}}</div>
+            </div>
+            <i class="bi bi-caret-right-fill ListRolling_LeftBodyMini_right Font_Title_Size" @click="Vue_ListRolling_rightFunction()"></i>
+          </div>
+          <div class="col-sm-9 ListRolling_RightBody">
+            <div v-for="(value, key) in Vue_ListRolling_list" :class="key==Vue_ListRolling_key?'':'visually-hidden'" class="ListRolling_RightMainBody">
+              <div v-for="list_1 in value" class="ListRolling_Piece" @click="Vue_ListRolling_listSelectFunction(list_1)">
+                <a :href="list_1.link">
+                  <div class="ListRolling_Piece_Img"><div class="Theme_center-center" :style="{backgroundImage: 'url('+list_1.img+')'}"></div></div>
+                  <div class="ListRolling_Piece_Body">
+                    <div class="ListRolling_Piece_Title Font_Title_Size Font_Normal_Color Theme_text-ellipsis">{{list_1.title}}</div>
+                    <div class="ListRolling_Piece_Text Font_Text_Size Font_Text_Color Theme_text-ellipsis"><p class="Theme_text-ellipsis">{{list_1.text}}</p></div>
+                    <div class="ListRolling_Piece_Info Font_Info_Size Font_Tips_Color Theme_text-ellipsis">{{list_1.info}}</div>
+                  </div>
+                  <div class="ListRolling_Piece_End Font_BigTitle_Size">
+                    {{list_1.data}}
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--######ListRolling######-->
+  </body>
+  <!-- jQuery (necessary for JavaScript plugins) -->
+    <!--Basic dependence js (Not recommend modification)-->
+      <script src="../../Common/BasicDependence/jquery/jquery.min.js"></script>
+      <script src="../../Common/BasicDependence/vue/vue.js"></script>
+      <script src="../../Common/BasicDependence/bootstrap/js/bootstrap.js"></script>
+    <!--Basic dependence js-->
+
+    <!--self Lib js start (please put your lib in ./lib) -->
+    <!--self Lib js end-->
+
+    <!--Debugging Tools import (It can't be changed)-->
+      <script src="../../Common/Lib/import.js"></script>
+      <script src="../../Common/DebuggingTools/IncludeLib.js"></script>
+    <!--Debugging Tools import-->
+
+    <!--self js start-->
+      <script src="ListRolling.js"></script>
+    <!--self js end-->
+</html>

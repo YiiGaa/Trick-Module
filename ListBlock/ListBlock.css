@@ -1,0 +1,59 @@
+.ListBlock_Body{
+}
+
+.ListBlock_mainBody{
+    padding-top: 5rem;
+    padding-bottom: 15rem;
+}
+
+.ListBlock_Piece{
+    padding-top: 5rem;
+}
+
+.ListBlock_Piece_Title{
+    font-weight: bold;
+}
+
+.ListBlock_Piece_BlockTitle{
+    margin-bottom: 1rem;
+    font-weight: bold;
+}
+
+.ListBlock_Piece_Block{
+    margin-top: 3rem;
+}
+
+.ListBlock_Piece_BlockBody{
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    box-shadow: 0rem 0rem 2.0rem 0.1rem rgb(83 103 199 / 13%);
+    padding: 1.5rem;
+    border-radius: 1.2rem;
+}
+
+.ListBlock_Piece_ListBlock{
+    height: 18rem;
+    padding: 0rem 1.5rem;
+}
+
+.ListBlock_Piece_ListBlock div{
+    margin-bottom: 0.5rem;
+}
+
+.ListBlock_Piece_BlockButton{
+    display: inline-block;
+    margin-top: 1.5rem;
+    float: right;
+    margin-bottom: 1.5rem;
+}
+
+.ListBlock_Piece_ListBlock a{
+    cursor: pointer;
+    text-decoration: none;
+    color: var(--Font_Normal_Color);
+}
+
+.ListBlock_Piece_ListBlock a:hover{
+    color: var(--Font_Link_ColorHover);
+}

@@ -1,0 +1,79 @@
+.Footer_Body{
+    min-height: 53rem;
+    padding-left: 0rem!important;
+    margin: 0rem !important;
+    align-items:flex-start;
+    padding-top: 5rem;
+    color: #eee;
+}
+
+.Footer_Row{
+    width: 100%;
+}
+
+.Footer_Slot{
+    width: 100%;
+    height: 100%;
+    left: 0rem;
+    top: 0rem;
+    position: absolute;
+    z-index: -10;
+    background-image: linear-gradient(to bottom, #3A32B9 , #5438D5);
+    clip-path: polygon(0 0, calc(50% - 10rem) 0, calc(50% - 8rem) 3rem, calc(50% + 8rem) 3rem, calc(50% + 10rem) 0, 100% 0, 100% 100%, 0 100%);
+}
+
+.Footer_Logo{
+    position: absolute;
+    top: -8rem;
+    left:50%;
+    transform:translateX(-50%);
+    text-align: center;
+    width: 15rem;
+}
+
+.Footer_Info_Logo{
+    height: 5rem;
+    margin-bottom: 2rem;
+}
+
+.Footer_Link_Title{
+    font-weight: bold;
+    margin-top: 2rem;
+}
+
+.Footer_Link_Info{
+    margin-top: 1rem;
+}
+.Footer_Link_Info a{
+    cursor: pointer;
+    text-decoration: none;
+    color: #eee;
+}
+.Footer_Link_Info a:hover{
+    cursor: pointer;
+    text-decoration: none;
+    color: #fff;
+}
+
+.Footer_Info_Info a{
+    cursor: pointer;
+    text-decoration: none;
+    color: #eee;
+}
+.Footer_Info_Info a:hover{
+    cursor: pointer;
+    text-decoration: none;
+    color: #fff;
+}
+
+.Footer_Contact{
+    width: 100%;
+    margin-top: 3rem;
+}
+.Footer_Contact_img{
+    width: 20rem;
+}
+
+.Footer_Contact_info{
+    margin-bottom: 1rem;
+}

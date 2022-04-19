@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Footer</title>
+
+    <!-- Basic dependence css -->
+    <link rel="stylesheet" href="../../Common/BasicDependence/bootstrap/css/bootstrap.css">
+
+    <!--Theme Css start-->
+      <link href="../../Common/Theme/theme.css" rel="stylesheet">
+      <link href="../../Common/Theme/font.css" rel="stylesheet">
+    <!--Theme Css end-->
+
+    <!--self Css start-->
+      <link href="Footer.css" rel="stylesheet">
+    <!--self Css end-->
+
+  </head>
+  <body onload="ControlLoad()">
+    <!--self Lib css start (please put your lib in ./lib) -->
+    <!--self Lib css end-->
+
+    <div style="height: 100px;width: 100%;"></div>
+
+    <!--######Footer######-->
+    <ul id="id_Footer_body" class="navbar Footer_Body navbar-dark" v-cloak>
+      <div class="container-xxl Font_Info_Size">
+        <div class="Footer_Slot"></div>
+        <img class="Footer_Logo" :src="Vue_Foote_logo"></img>
+        <div class="row Footer_Row">
+          <div class="col-md-5 Font_Info_Size">
+            <img class="Footer_Info_Logo" :src="Vue_Foote_infoLogo"></img>
+            <div v-for="list in Vue_Foote_info" class="Footer_Info_Info"  v-html="list"></div>
+          </div>
+          <div v-for="(list,index) in Vue_Foote_link" :class="index==0?'offset-md-1':''" class="col-md-2 Font_Text_Size">
+            <div class="Footer_Link_Title Font_Invert_Color Font_Title_Size">{{list.title}}</div>
+            <div v-for="list_1 in list.list" class="Footer_Link_Info"><a class="" target="_blank" :href="list_1.link">{{list_1.title}}</a></div>
+          </div>
+        </div>
+        <div class="row justify-content-md-center Footer_Contact">
+          <div class="col-md-12 Footer_Contact_info text-center">
+            {{Vue_Foote_contact.info}}
+          </div>
+          <div class="col-md-12 text-center">
+            <img class="Footer_Contact_img" :src="Vue_Foote_contact.img">
+          </div>
+        </div>
+      </div>
+    </ul>
+    <!--######Footer######-->
+  </body>
+  <!-- jQuery (necessary for JavaScript plugins) -->
+    <!--Basic dependence js (Not recommend modification)-->
+      <script src="../../Common/BasicDependence/jquery/jquery.min.js"></script>
+      <script src="../../Common/BasicDependence/vue/vue.js"></script>
+      <script src="../../Common/BasicDependence/bootstrap/js/bootstrap.js"></script>
+    <!--Basic dependence js-->
+
+    <!--self Lib js start (please put your lib in ./lib) -->
+    <!--self Lib js end-->
+
+    <!--Debugging Tools import (It can't be changed)-->
+      <script src="../../Common/Lib/import.js"></script>
+      <script src="../../Common/DebuggingTools/IncludeLib.js"></script>
+    <!--Debugging Tools import-->
+
+    <!--self js start-->
+      <script src="Footer.js"></script>
+    <!--self js end-->
+</html>

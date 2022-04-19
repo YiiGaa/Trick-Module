@@ -1,0 +1,44 @@
+.WallLight_Body{
+}
+
+.WallLight_mainBody{
+    padding-top: 10rem;
+    padding-bottom: 15rem;
+}
+
+.WallLight_Title{
+    text-align: center;
+    font-weight: bold;
+}
+
+.WallLight_Piece{
+    margin-top: 3rem;
+}
+
+.WallLight_PieceDown{
+    margin-top: 7rem;
+}
+
+.WallLight_Piece_Title{
+    font-weight: bold;
+}
+
+.WallLight_Piece_Info{
+    margin-top: 1rem;
+    padding: 0 4rem;
+}
+
+@media screen and (max-width: 576px) {
+    .WallLight_mainBody{
+        padding-bottom: 10rem;
+    }
+    .WallLight_Piece{
+        margin-top: 3rem;
+    }
+    .WallLight_PieceDown{
+        margin-top: none;
+    }
+    .WallLight_Piece_Info{
+        padding: 0;
+    }    
+}
