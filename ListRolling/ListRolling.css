@@ -74,7 +74,7 @@
     margin-left: 1.5rem;
     height: 15rem;
     border-radius: 1.2rem;
-    box-shadow: 0rem 0rem 2.0rem 0.1rem rgb(83 103 199 / 13%); 
+    box-shadow: var(--Theme_BoxShadow); 
     margin-top: 1.5rem;
     cursor: pointer;
     background-color: #fff;
